@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"   // 调大 HeapSize
+    }
+
 }
 
 dependencies {
